@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Credits</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Great+Vibes&family=Allura&family=Sacramento&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:#111;
+
+    font-family:'Poppins', sans-serif;
+}
+
+/* PHONE */
+
+.phone-frame{
+
+    width:390px;
+    height:844px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:url('creditsbg.png');
+
+    background-size:cover;
+    background-position:center;
+}
+
+/* FLOAT */
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-8px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+}
+
+/* CONTENT */
+
+.content{
+
+    position:absolute;
+
+    top:20%;
+
+    left:10%;
+
+    transform:translate(-50%,-50%);
+
+    width:82%;
+
+    text-align:center;
+
+    color:#24344f;
+
+    animation:float 5s ease-in-out infinite;
+}
+
+/* SMALL HEADINGS */
+
+.label{
+
+    font-size:13px;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    opacity:0.72;
+
+    margin-top:24px;
+
+    margin-bottom:10px;
+}
+
+/* MAIN NAMES */
+
+.name{
+
+    font-family:'Allura', cursive;
+
+    font-size:54px;
+
+    line-height:1.1;
+
+    color:#1d2c45;
+
+    text-shadow:
+    0 4px 12px rgba(255,255,255,0.28);
+}
+
+/* SUPPORT */
+
+.support{
+
+    font-family:'Great Vibes', cursive;
+
+    font-size:42px;
+
+    color:#32476a;
+}
+
+/* CHATGPT */
+
+.chatgpt{
+
+    font-family:'Sacramento', cursive;
+
+    font-size:46px;
+
+    color:#20314d;
+
+    margin-top:4px;
+}
+
+/* EXTRA TEXT */
+
+.extra{
+
+    margin-top:10px;
+
+    font-size:14px;
+
+    line-height:1.7;
+
+    opacity:0.84;
+}
+
+/* LITTLE STARS */
+
+.star{
+
+    position:absolute;
+
+    color:#39527a;
+
+    opacity:0.55;
+
+    animation:float 4s ease-in-out infinite;
+}
+
+.s1{
+    top:110px;
+    left:35px;
+    font-size:18px;
+}
+
+.s2{
+    top:190px;
+    right:32px;
+    font-size:20px;
+    animation-delay:1s;
+}
+
+.s3{
+    bottom:180px;
+    left:40px;
+    font-size:16px;
+    animation-delay:2s;
+}
+
+.s4{
+    bottom:130px;
+    right:38px;
+    font-size:22px;
+    animation-delay:1.5s;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="phone-frame">
+
+    <!-- STARS -->
+
+    <div class="star s1">✦</div>
+    <div class="star s2">★</div>
+    <div class="star s3">✦</div>
+    <div class="star s4">★</div>
+
+    <!-- CONTENT -->
+
+    <div class="content">
+
+        <div class="label">
+            Created By
+        </div>
+
+        <div class="name">
+            Divyanshi Sharma
+        </div>
+
+        <div class="label">
+            Supported By
+        </div>
+
+        <div class="support">
+            Shivam Jadon
+        </div>
+
+        <div class="label">
+            Special Thanks
+        </div>
+
+        <div class="chatgpt">
+            ChatGPT
+        </div>
+
+        <div class="extra">
+            thanky0u for surviving this farewell project!<br>
+            Bye.
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
