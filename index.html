@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Farewell Archives 2025-26</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      height:100vh;
+      overflow:hidden;
+      background:#f6eee4;
+      font-family:'Caveat', cursive;
+      position:relative;
+      color:#6b4d3c;
+    }
+
+    /* Background Image */
+    .bg{
+      position:absolute;
+      inset:0;
+      background-image:url('bg.png');
+      background-size:contain;
+      background-repeat:no-repeat;
+      background-position:center;
+      filter:brightness(92%);
+      transform:scale(1.05);
+    }
+
+    /* Dark Overlay */
+    .overlay{
+      position:absolute;
+      inset:0;
+      background:rgba(255,248,240,0.15);
+    }
+
+    /* Floating Glow Dots */
+    .lights span{
+      position:absolute;
+      width:6px;
+      height:6px;
+      background:rgba(255,248,240,0.55);
+      border-radius:50%;
+      opacity:0.5;
+      animation:float 8s linear infinite;
+    }
+
+    .lights span:nth-child(1){ top:20%; left:10%; animation-delay:0s; }
+    .lights span:nth-child(2){ top:70%; left:20%; animation-delay:2s; }
+    .lights span:nth-child(3){ top:50%; left:80%; animation-delay:4s; }
+    .lights span:nth-child(4){ top:30%; left:65%; animation-delay:1s; }
+    .lights span:nth-child(5){ top:85%; left:75%; animation-delay:3s; }
+
+    @keyframes float{
+      0%{
+        transform:translateY(0px);
+        opacity:0.2;
+      }
+      50%{
+        transform:translateY(-18px);
+        opacity:0.8;
+      }
+      100%{
+        transform:translateY(0px);
+        opacity:0.2;
+      }
+    }
+
+    /* Main Content */
+    .content{
+      position:relative;
+      z-index:2;
+      height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:20px;
+      flex-direction:column;
+    }
+
+    .small-text{
+      letter-spacing:5px;
+      font-size:14px;
+      opacity:0.75;
+      margin-bottom:15px;
+      text-transform:uppercase;
+    }
+
+    h1{
+      font-family:'Cormorant Garamond', serif;
+      font-size:78px;
+      font-weight:600;
+      line-height:0.95;
+      margin-bottom:18px;
+      animation:fadeIn 1.4s ease;
+    }
+
+    .year{
+      font-size:22px;
+      letter-spacing:7px;
+      opacity:0.8;
+      margin-bottom:35px;
+      animation:fadeIn 2s ease;
+    }
+
+    .tagline{
+      max-width:620px;
+      font-size:17px;
+      line-height:1.7;
+      opacity:0.88;
+      margin-bottom:45px;
+      animation:fadeIn 2.4s ease;
+    }
+
+    .btn{
+      padding:12px 28px;
+      border:1px solid rgba(95,70,53,0.25);
+      background:rgba(255,255,255,0.08);
+      backdrop-filter:blur(6px);
+      color:#6b4d3c;
+      text-decoration:none;
+      border-radius:30px;
+      font-size:16px;
+      letter-spacing:2px;
+      transition:0.35s ease;
+      animation:fadeIn 3s ease;
+    }
+
+    .btn:hover{
+      background:#8d6e5a;
+      color:black;
+      transform:translateY(-3px);
+    }
+
+    .bottom-text{
+      position:absolute;
+      bottom:22px;
+      font-size:13px;
+      opacity:0.55;
+      letter-spacing:2px;
+    }
+
+    @keyframes fadeIn{
+      from{
+        opacity:0;
+        transform:translateY(20px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0px);
+      }
+    }
+
+    /* Mobile Responsive */
+    @media(max-width:768px){
+      h1{
+        font-size:52px;
+      }
+
+      .tagline{
+        font-size:15px;
+        line-height:1.6;
+      }
+
+      .year{
+        font-size:18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="bg"></div>
+  <div class="overlay"></div>
+
+  <div class="lights">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div class="content">
+
+    
+
+    <h1>
+      Farewell<br>
+      Archives
+    </h1>
+
+    <p class="year">2025-26</p>
+
+    <a href="principal.html" class="btn">Tap To Enter</a>
+
+    
+
+  </div>
+
+</body>
+</html>

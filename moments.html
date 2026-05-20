@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Last Uniform Attendance</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    background:#111;
+
+    display:flex;
+    justify-content:center;
+
+    font-family:'Cormorant Garamond', serif;
+}
+
+/* phone frame */
+
+.phone-frame{
+
+    width:390px;
+
+    height:844px;
+
+    overflow-y:auto;
+
+    scroll-behavior:smooth;
+
+    background-image:url('momentsbg.png');
+    background-size:cover;
+    background-position:center;
+
+    border-radius:32px;
+
+    box-shadow:0 10px 40px rgba(0,0,0,0.35);
+
+    padding:18px 16px 40px;
+}
+
+.phone-frame::-webkit-scrollbar{
+    width:0;
+}
+
+/* sections */
+
+.scene{
+
+    margin-bottom:30px;
+
+    opacity:0;
+
+    transform:translateY(80px) scale(0.95);
+
+    transition:1s ease;
+}
+
+.scene.show{
+
+    opacity:1;
+
+    transform:translateY(0) scale(1);
+}
+
+/* memory card */
+
+.memory-card{
+
+    position:relative;
+
+    background:rgba(255,255,255,0.16);
+
+    backdrop-filter:blur(4px);
+
+    padding:10px;
+
+    border-radius:26px;
+
+    overflow:hidden;
+
+    box-shadow:0 8px 24px rgba(0,0,0,0.18);
+}
+
+/* sparkle */
+
+.memory-card::before{
+
+    content:'✦';
+
+    position:absolute;
+
+    top:12px;
+    right:18px;
+
+    color:white;
+
+    font-size:18px;
+
+    opacity:0.7;
+}
+
+/* videos */
+
+.memory-card video{
+
+    width:100%;
+
+    border-radius:18px;
+
+    display:block;
+
+    object-fit:cover;
+}
+
+/* captions */
+
+.caption{
+
+    position:absolute;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:85%;
+
+    text-align:center;
+
+    color:white;
+
+    text-shadow:0 4px 18px rgba(0,0,0,0.7);
+
+    opacity:0;
+
+    transition:1s ease;
+}
+
+.caption.show{
+    opacity:1;
+}
+
+/* caption styles */
+.cap1{
+
+    bottom:28px;
+
+    font-size:36px;
+
+    font-weight:600;
+
+    line-height:1.05;
+}
+.cap2{
+
+    bottom:28px;
+
+    font-size:36px;
+
+    font-weight:600;
+
+    line-height:1.05;
+}
+.cap3{
+
+    bottom:28px;
+
+    font-size:36px;
+
+    font-weight:600;
+
+    line-height:1.05;
+}
+         
+
+.cap4{
+
+    bottom:28px;
+
+    font-size:36px;
+
+    font-weight:600;
+
+    line-height:1.05;
+}
+
+/* collage section */
+
+.collage-section{
+
+    opacity:0;
+
+    transform:translateY(80px);
+
+    transition:1.3s ease;
+}
+
+.collage-section.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+}
+
+/* heading */
+
+.floating-heading{
+
+    position:absolute;
+
+    top:130px;
+
+    left:18px;
+
+    width:170px;
+
+    font-family:'Nothing You Could Do', cursive;
+
+    font-size:34px;
+
+    line-height:1.05;
+
+    color:#6d4c37;
+
+    transform:rotate(-4deg);
+
+    text-shadow:0 2px 5px rgba(255,255,255,0.4);
+
+    z-index:5;
+}
+
+/* collage */
+
+.collage{
+
+    position:relative;
+
+    height:760px;
+}
+
+/* photos */
+
+.photo{
+
+    position:absolute;
+
+    background:white;
+
+    padding:8px;
+
+    border-radius:8px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,0.14);
+}
+
+.photo img{
+
+    width:100%;
+
+    display:block;
+
+    border-radius:4px;
+}
+
+/* tape */
+
+.photo::before{
+
+    content:'';
+
+    position:absolute;
+
+    width:64px;
+    height:16px;
+
+    background:rgba(226,209,173,0.75);
+
+    top:-8px;
+    left:50%;
+
+    transform:translateX(-50%);
+}
+
+/* placements */
+
+.pic1{
+
+    width:45%;
+
+    top:0;
+    left:0;
+
+    transform:rotate(-5deg);
+}
+
+.pic2{
+
+    width:45%;
+
+    top:70px;
+    right:0;
+
+    transform:rotate(4deg);
+}
+
+.pic3{
+
+    width:52%;
+
+    top:290px;
+    left:8px;
+
+    transform:rotate(-4deg);
+}
+
+.pic4{
+
+    width:44%;
+
+    top:370px;
+    right:0;
+
+    transform:rotate(5deg);
+}
+
+.pic5{
+
+    width:58%;
+
+    bottom:0;
+
+    left:50%;
+
+    transform:translateX(-50%) rotate(-2deg);
+}
+
+/* continue */
+
+.next{
+
+    display:block;
+
+    width:fit-content;
+
+    margin:24px auto 0;
+
+    padding:10px 18px;
+
+    text-decoration:none;
+
+    border-radius:24px;
+
+    background:rgba(255,255,255,0.72);
+
+    color:#5c4331;
+
+    font-size:13px;
+
+    letter-spacing:2px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="phone-frame" id="frame">
+
+    <!-- VIDEO 1 -->
+
+    <section class="scene show" id="scene1">
+
+        <div class="memory-card">
+
+            <video id="video1" autoplay muted playsinline>
+                <source src="moment1.mp4" type="video/mp4">
+            </VIDEo>
+
+        </div>
+
+    </section>
+
+    <!-- VIDEO 2 -->
+
+    <section class="scene" id="scene2">
+
+        <div class="memory-card">
+
+            <video id="video2" muted playsinline>
+                <source src="moment2.mp4" type="video/mp4">
+            </video>
+
+            <div class="caption cap2" id="cap2">
+                end of loud winnings and disaster defeats
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- VIDEO 3 -->
+
+    <section class="scene" id="scene3">
+
+        <div class="memory-card">
+
+            <video id="video3" muted playsinline>
+                <source src="moment3.mp4" type="video/mp4">
+            </video>
+
+            <div class="caption cap3" id="cap3">
+                end of the classroom chaos
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- COLLAGE -->
+
+    <section class="collage-section" id="collageSection">
+
+
+
+        <div class="collage">
+  <div class="floating-heading">
+   with the last UNIFORM attendance
+</div>
+
+            <div class="photo pic1">
+                <img src="picture1.jpg">
+            </div>
+
+            <div class="photo pic2">
+                <img src="picture2.jpg">
+            </div>
+
+            <div class="photo pic3">
+                <img src="picture3.png">
+            </div>
+
+            <div class="photo pic4">
+                <img src="picture4.jpg">
+            </div>
+
+            <div class="photo pic5">
+                <img src="picture5.jpg">
+            </div>
+
+        </div>
+
+        <a href="farewellintro.html" class="next">
+            continue →
+        </a>
+
+    </section>
+
+</div>
+
+<script>
+
+const frame = document.getElementById('frame');
+
+const video1 = document.getElementById('video1');
+const video2 = document.getElementById('video2');
+const video3 = document.getElementById('video3');
+
+const scene2 = document.getElementById('scene2');
+const scene3 = document.getElementById('scene3');
+
+const collage = document.getElementById('collageSection');
+
+const cap2 = document.getElementById('cap2');
+const cap3 = document.getElementById('cap3');
+
+/* VIDEO 1 ENDS */
+
+video1.onended = () => {
+
+    scene2.classList.add('show');
+
+    scene2.scrollIntoView({
+        behavior:'smooth'
+    });
+
+    video2.play();
+
+    setTimeout(() => {
+        cap2.classList.add('show');
+    },1000);
+};
+
+/* VIDEO 2 ENDS */
+
+video2.onended = () => {
+
+    scene3.classList.add('show');
+
+    scene3.scrollIntoView({
+        behavior:'smooth'
+    });
+
+    video3.play();
+
+    setTimeout(() => {
+        cap3.classList.add('show');
+    },700);
+};
+
+/* VIDEO 3 ENDS */
+
+video3.onended = () => {
+
+    collage.classList.add('show');
+
+    collage.scrollIntoView({
+        behavior:'smooth'
+    });
+};
+
+</script>
+
+</body>
+</html>

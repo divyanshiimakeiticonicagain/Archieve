@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Radhika Mam Message</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:#111;
+
+    font-family:Georgia, serif;
+}
+
+/* wrapper */
+
+.wrapper{
+
+    position:relative;
+
+    width:390px;
+
+    height:844px;
+}
+
+/* image */
+
+.fullpage{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    border-radius:32px;
+
+    display:block;
+
+    box-shadow:0 10px 40px rgba(0,0,0,0.35);
+}
+.wrapper{
+
+    position:relative;
+
+    width:390px;
+
+    height:844px;
+
+    animation:fadeIn 1.8s ease;
+}
+
+/* floating animation */
+
+.fullpage{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    border-radius:32px;
+
+    display:block;
+
+    box-shadow:0 10px 40px rgba(0,0,0,0.35);
+
+    animation:floatPage 5s ease-in-out infinite;
+}
+
+/* animations */
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:scale(1.03);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+@keyframes floatPage{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-8px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+}
+
+/* continue text */
+
+.btn{
+
+    position:absolute;
+
+    bottom:22px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    padding:10px 22px;
+
+    border-radius:30px;
+
+    text-decoration:none;
+
+    background:rgba(255,255,255,0.18);
+
+    backdrop-filter:blur(8px);
+
+    color:white;
+
+    font-size:13px;
+
+    letter-spacing:2px;
+
+    border:1px solid rgba(255,255,255,0.28);
+
+    box-shadow:0 4px 18px rgba(0,0,0,0.18);
+
+    z-index:20;
+}
+
+
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <img src="juniors2.png" class="fullpage">
+
+    <a href="Redhand.html" class="btn">
+        continue →
+    </a>
+
+</div>
+
+</body>
+</html>

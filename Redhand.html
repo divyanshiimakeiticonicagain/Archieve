@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Last RedHand</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Great+Vibes&family=Cookie&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:#101010;
+
+    font-family:'Poppins', sans-serif;
+}
+
+/* PHONE */
+
+.phone-frame{
+
+    width:430px;
+    height:932px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(180deg,
+    #eef5ff 0%,
+    #dfefff 100%);
+}
+
+/* DOODLES */
+
+.doodle{
+
+    position:absolute;
+
+    opacity:0.18;
+
+    font-size:38px;
+
+    color:#49648e;
+}
+
+.d1{
+    top:80px;
+    left:28px;
+}
+
+.d2{
+    top:150px;
+    right:34px;
+}
+
+.d3{
+    bottom:200px;
+    left:36px;
+}
+
+.d4{
+    bottom:120px;
+    right:36px;
+}
+
+/* TITLE */
+
+.title{
+
+    position:absolute;
+
+    top:70px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:88%;
+
+    text-align:center;
+}
+
+.small{
+
+    font-size:15px;
+
+    letter-spacing:4px;
+
+    color:#4c6387;
+
+    opacity:0.72;
+
+    margin-bottom:10px;
+}
+
+.big{
+
+    font-family:'Great Vibes', cursive;
+
+    font-size:58px;
+
+    line-height:1.1;
+
+    color:#2f4568;
+}
+
+.red{
+
+    font-family:'Cookie', cursive;
+
+    font-size:70px;
+
+    color:#c74b61;
+
+    margin-top:-4px;
+}
+
+/* IMAGE SECTION */
+
+.photos{
+
+    position:absolute;
+
+    top:300px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:88%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+}
+
+/* BOTH PHOTOS */
+
+.pic{
+
+    width:48%;
+
+    background:white;
+
+    padding:9px;
+
+    border-radius:28px;
+
+    box-shadow:
+    0 10px 28px rgba(0,0,0,0.16);
+}
+
+.pic1{
+
+    transform:rotate(-4deg);
+}
+
+.pic2{
+
+    transform:rotate(5deg);
+
+    margin-top:45px;
+}
+
+.pic img{
+
+    width:100%;
+
+    display:block;
+
+    border-radius:20px;
+}
+
+/* BOTTOM TEXT */
+
+.bottom{
+
+    position:absolute;
+
+    bottom:110px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:82%;
+
+    text-align:center;
+
+    color:#496180;
+
+    font-size:15px;
+
+    line-height:1.8;
+}
+
+/* BUTTON */
+
+.btn{
+
+    position:absolute;
+
+    bottom:36px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    padding:12px 28px;
+
+    border-radius:30px;
+
+    text-decoration:none;
+
+    background:
+    rgba(255,255,255,0.22);
+
+    backdrop-filter:blur(8px);
+
+    color:#304769;
+
+    font-size:13px;
+
+    letter-spacing:2px;
+
+    border:1px solid rgba(255,255,255,0.35);
+
+    box-shadow:
+    0 8px 24px rgba(0,0,0,0.14);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="phone-frame">
+
+    <!-- DOODLES -->
+
+    <div class="doodle d1">✦</div>
+    <div class="doodle d2">☁</div>
+    <div class="doodle d3">★</div>
+    <div class="doodle d4">♡</div>
+
+    <!-- TITLE -->
+
+    <div class="title">
+
+        <div class="small">
+            lastly...
+        </div>
+
+        <div class="big">
+            Shout out to the
+        </div>
+
+        <div class="red">
+            last REDHAND
+        </div>
+
+    </div>
+
+    <!-- PHOTOS -->
+
+    <div class="photos">
+
+        <div class="pic pic1">
+            <img src="redhand1.png">
+        </div>
+
+        <div class="pic pic2">
+            <img src="redhand2.png">
+        </div>
+
+    </div>
+
+    <!-- TEXT -->
+
+    <div class="bottom">
+        from random school chaos<br>
+        to unforgettable memories ♡
+    </div>
+
+    <!-- NEXT BUTTON -->
+
+    <a href="whoswatching.html" class="btn">
+        next →
+    </a>
+
+</div>
+
+</body>
+</html>
